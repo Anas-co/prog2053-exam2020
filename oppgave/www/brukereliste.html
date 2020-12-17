@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body onload="hentAlleBrukere()">
+    <div class="container">
+        <div class="d-flex flex-row mt-3">
+            <div class="col col-md-3 bg-light pb-6">
+                <h3 class="pt-6 pl-3">Alle Brukere</h3>
+                <div id="brukere"></div>
+            </div>
+
+            <div class="col col-md-8 bg-light ml-6 pb-5">
+                <h3 class="pt-6 pl-3">Redigere en bruker</h3>
+                <div id="bruker" style="display: none;">
+                    <form method="POST">
+                        <div class="form-group text-danger">
+                            <label for="E-post">E-post</label>
+                            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group text-danger">
+                            <label for="exampleInputEmail1">Fornavn</label>
+                            <input class="form-control" id="Fornavn" type="text" paceholder="Default input">
+                        </div>
+                        <div class="form-group text-danger">
+                            <label for="Etternavn">Etternavn</label>
+                            <input class="form-control" id="Etternavn" type="text" paceholder="Default input">
+                        </div>
+                        <div class="form-group text-danger">
+                            <label for="Gammelt Passord">Gammelt Passord</label>
+                            <input type="password" class="form-control" id="Password" placeholder="Password">
+                        </div>
+                        <div class="form-group text-danger">
+                            <label for="Nytt Passord">Nytt Passord</label>
+                            <input type="password" class="form-control" id="Password1" placeholder="Password">
+                        </div>
+                        <div class="form-group text-danger">
+                            <button type="submit" id="submitForm" name="editUser" class="btn btn-danger" value="Edit User">Rediger</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/components/liste.js" charset="utf-8"></script>
+</body>
+
+</html>
